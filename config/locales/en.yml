@@ -14,7 +14,7 @@ en:
     sent_by_contact_form: "Sent by contact form from %{email}"
     sent_by_name: "Sent by %{name} from %{email}"
     subject: "Contact Us message from %{email}"
-    submit: "Submit"
+    submit: "Send Message"
 
     contact_us:
       notices:
