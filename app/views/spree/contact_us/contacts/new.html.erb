@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-7 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-1">
       <div class="page-title">
         <h1><%= Spree.t(:contact_us_title) %></h1>
         <p>We love to talk. Let's listen to what you have to say!</p>
@@ -17,7 +17,7 @@
 </div>
 <div class="container">
   <div class=" row">
-    <div class="col-md-7 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-1">
       <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
         <div class="row">
           <% if SpreeContactUs.require_name %>
@@ -36,7 +36,7 @@
         <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit), class: 'btn btn-success' %>
       <% end %>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="contact-info">
         <div class="box-con">
           <div class="icon">
