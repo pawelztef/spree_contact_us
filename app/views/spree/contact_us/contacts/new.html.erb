@@ -5,19 +5,15 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-1">
-      <div class="page-title">
-        <h1><%= Spree.t(:contact_us_title) %></h1>
-        <p>We love to talk. Let's listen to what you have to say!</p>
-      </div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-title">
+      <h1><%= Spree.t(:contact_us_title) %></h1>
+      <p><%= Spree.t(:catch_phrase) %></p>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class=" row">
-    <div class="col-md-8 col-md-offset-1">
+  <div class="col-md-8">
+    <div class="contact-form">
       <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
         <div class="row">
           <% if SpreeContactUs.require_name %>
@@ -32,33 +28,32 @@
         <% if SpreeContactUs.require_subject %>
           <%= f.text_field :subject, class: 'required form-control', placeholder: '* Your Subject' %>
         <% end %>
-        <%= f.text_area :message, class: 'required form-control', placeholder: '* Your Message', rows: 10 %>
+        <%= f.text_area :message, class: 'required form-control', placeholder: '* Your Message', rows: 5 %>
         <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit), class: 'btn btn-success' %>
       <% end %>
     </div>
-    <div class="col-md-3">
-      <div class="contact-info">
-        <div class="box-con">
-          <div class="icon">
-            <span class="ti-email"></span>
-          </div>
-          <div class="details">
-            <h3>Email</h3>
-            <p> hello@example.com</p>
-          </div>
+  </div>
+  <div class="col-md-4">
+    <div class="contact-info">
+      <div class="box-con">
+        <div class="icon">
+          <span class="ti-email"></span>
         </div>
-        <div class="box-con">
-          <div class="icon">
-            <span class="ti-mobile"></span>
-          </div>
-          <div class="details">
-            <h3>Phone</h3>
-            <p>Sales: +44 - 02920111222
-            <br> Enquiries: +44 - 02920111444</p>
-          </div>
+        <div class="details">
+          <h3>Email</h3>
+          <p> hello@example.com</p>
+        </div>
+      </div>
+      <div class="box-con">
+        <div class="icon">
+          <span class="ti-mobile"></span>
+        </div>
+        <div class="details">
+          <h3>Phone</h3>
+          <p>Sales: +44 - 02920111222
+          <br> Enquiries: +44 - 02920111444</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
